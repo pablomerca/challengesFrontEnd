@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color: #F3EAE3;
+
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    width: 590px;
+    height: 450px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 15px;
+
+    display: flex;
+
+}
+
+
+
+img.desktop{
+    width: 50%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+img.mobile{
+    display: none;
+}
+
+button{
+    text-align: center;
+    color: white;
+    background-color: #3E7F67;
+    border-radius: 8px;
+    
+    
+    /* padding: 20px 80px; */
+    margin: 28px 30px 30px 30px;
+    border: 0px;
+
+    height: 47px;
+    width: 235px;
+    
+    
+
+}
+
+button:hover{
+    background-color: #1d4837;
+}
+
+h4{
+    font-family: 'Hind Madurai', sans-serif;
+    letter-spacing: 4px;
+    margin: 30px  30px 20px 30px;
+    color: rgb(117, 112, 117);
+}
+
+h1{
+    font-family: 'Merriweather', serif;
+    line-height: 1;
+    margin: 20px 60px 20px 30px;
+
+}
+
+.bigPrice{
+    font-family: 'Abril Fatface', cursive;
+    color: #3E7F67;
+    font-size: 35px;
+    margin: 30px 22px 30px 30px;
+
+}
+
+.smallPrice{
+    color: #757877;
+    font-size: 14px;
+    text-decoration-line: line-through;
+    display: inline-block;
+
+    position: relative;
+    bottom: 7px;
+
+}
+
+i{
+    margin: 0px 10px 0px 0px ;
+}
+
+.description{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px 40px 20px 30px;
+    font-size: 14px;
+    font-weight: 590;
+    line-height: 1.6;
+}
+
