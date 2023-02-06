@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    background-color: #D6E1F0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.card{
+
+    width: 425px;
+    height: 665px;
+    /* margin: auto; */
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 0px;
+    
+
+    display: block;
+    flex-shrink: 0;
+
+
+    background-color: white;
+    border-radius: 25px;
+
+}
+
+
+img{
+    width: 100%;
+    padding: 23px;
+    border-radius: 40px;
+}
+
+.title{
+    text-align: center;
+    margin: 5px 30px;
+}
+
+p{
+    text-align: center;
+    margin: 25px 35px;
+    font-size: 19px;
+    color: #666565;
+}
+
+
+/* trucazo para centar items(imagen x ej) en los ejes:
+pirmero tomamos el  hijo y le decimos que tome todo el width
+del padre 100%, esto nos deja  con todo  tapado sin margenes.
+antes que nada usar box-sizing: border-box; asi, no se me va
+a desbordar al manipular, el truco es usar  padding como si fuera 
+margin, ya que esta en border box, va crear espacio para adentro entre 
+la imagen y el contenedor, reduciendo el contenido de la img */
