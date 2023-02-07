@@ -74,6 +74,24 @@ const proudOfThisFunc = () => {
   console.log('🎉')
 }
 ```
+------------------------
+```css
+button{
+
+    /* margin: 28px 30px 30px 30px; */
+    
+    height: 47px;
+    width: 80%;
+    margin: 28px 10% 30px 10%;   
+}
+  
+  /* A la hora de implementar botones que cambian de tamaño responsivo, es mejor dar sus dimensiones y sus margenes en %
+  del contenedor, ya que por alguna razon, el truco de centrar con margin auto no funcionaba... */
+
+  ```
+
+
+
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
