@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 0px;
+  /* position: relative; */
+  height: 100%;
+}
+
+/* TRABAJAMOS EN EL  HEADER Y EL NAV RESPONSIVE */
+
+.big-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aquamarine; */
+  /* position: relative; */
+  margin-bottom: 35px;
+}
+
+nav {
+  display: flex;
+  flex-shrink: 0;
+  /* background-color: bisque; */
+}
+
+/* BOTONES DEL NAV */
+
+nav a {
+  padding: 20px 0px 20px 50px;
+  flex-shrink: 0;
+
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(95, 95, 95);
+}
+nav a:hover{
+  color: orange;
+
+}
+
+header > img {
+  padding: 9px 0px;
+}
+
+.burger {
+  display: none;
+  font-size: 40px;
+}
+
+.sidenav {
+  width: 0%;
+  height: 100%;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+
+  padding-top: 140px;
+
+  overflow-x: hidden;
+  z-index: 10;
+
+  background-color: rgb(255, 255, 255);
+
+  transition: 0.5s;
+
+  z-index: 70;
+}
+.sidenav a {
+  display: block;
+  padding: 18px 210px 18px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #100c0c;
+
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  padding: 18px 38px 18px 32px;
+  font-size: 66px;
+
+  /* transition: 0.5s; */
+}
+
+/* AHORA TRABAJAMOS EN EL TOP CONTAINER */
+
+.top-container {
+  /* background-color: rgb(118, 255, 209); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  min-height: 530px;
+}
+
+.featured {
+  /* background-color: aqua; */
+  flex: 1 1 67%;
+  margin-right: 27px;
+}
+
+.img-desktop {
+  max-width: 100%;
+  min-height: 237px;
+
+  object-fit: cover;
+
+}
+.img-mobile{
+  display: none;
+}
+
+/* TRABAJANDO EN EL ASIDE DESDE AFUERA */
+
+.top-container>aside {
+  flex: 1 1 368px;
+  background-color: black;
+  color: aliceblue;
+
+  padding: 33px;
+
+  /* COMPORTAMIENTO COMO CONTAINER FLEX */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* PARA LOS TEXTOS DENTRO DE ASIDE */
+h3, h2 {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+h2 {
+  color: orange;
+  font-size: 40px;
+}
+
+div.new:not(:last-child)::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: aliceblue;
+  margin-top: 14px;
+}
+div.new:not(:last-child){
+  margin-bottom: 10px;
+}
+
+
+/* ARTICULO FEATURED  */
+
+.featured-article{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+
+}
+ 
+.featured-article  h1{
+
+  margin: 10px 25px 0px 0px;
+
+  font-size: 59px;
+  line-height: 0.97;
+  flex: 0 1 50%;
+
+}
+
+.featured-article-body{
+
+  flex: 0 1 50%;
+ 
+
+}
+
+
+.featured-article-body p{
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* BOTON READ MORE */
+
+.button{
+
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(227, 107, 63);
+  color:white;
+  text-decoration: none;
+  font-size: 22px;
+
+  
+  width: 60%;
+  min-width: 120px;
+
+  padding: 9px 20px;
+  margin-top: 18px;
+}
+
+.button:hover{
+  background-color: rgb(0, 0, 0);
+
+}
+
+/* FOOTER ARTICLES */
+
+footer{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(249.7px, 1fr) );;
+  width: 100%;
+
+  margin-top: 45px;
+  margin-bottom: 30px;
+  gap: 16px;
+  
+}
+
+/* LOS BOTTOM ARTICLE SON GRID CHILDREN */
+
+.bottom-article{
+  display: flex;
+
+}
+
+/* HIJOS DIRECTOS DE LOS CONENEDORES DIV BOTTOM ARTICLE (FLEX), OSEA FLEX ITEMS */
+
+.bottom-article img{
+  width: 110px;
+  max-height: 155px;
+  grid-row: 1/ span 3;
+  grid-column: 1/ span 1;
+
+  margin-right: 20px;
+}
+
+.bottom-article-body{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* HIJOS DIRECTOS DE LOS CONTENEDORES bottom-article-body (FLEX), FLEX CHILDREN */
+
+
+.bottom-article-body h3{
+  grid-row: 1 span 1;
+  grid-column: 2 span 1;
+}
+
+/* .bottom-article:not(:first-child){
+  margin-left: 15px;
+} */
+
+.bottom-article-body h1,
+.bottom-article-body p, 
+.bottom-article-body h3{
+  margin: 0;
+}
+.bottom-article-body h1{
+  color: rgb(116, 119, 133);
+}
+
+
+
+
+@media screen and (max-width: 760px) {
+  nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  /* CAMBIOS EN EL FEATURED CONTAINER */
+
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile{
+    display: block;
+    width: 100%;
+  }
+
+  .top-container{
+    flex-direction: column;
+  }
+
+  .featured{
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+ 
+
+
+}
+
+.nav-cover{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display:none;
+
+  z-index: 50;
+}
+
+/* como crear un menu de navegacion de haburguesa responsive:
+lo primero es conocer el caracter ansi para la hamburguesa  &#9776
+luego tenemos que poner la hamburguesa en el container del header
+
+TIENE QUE ESTAR EN EL MISMO NIVEL QUE EL NAV, NO PUEDE SER SU HIJO
+
+por default debe tener display none, luego, en el mediaquery de tablet x ej
+le ponemos display block y al nav le cambiamos a none para que aparezca uno 
+y desaparezca el otro
+
+a la hamburguesa le tenemos que poner la propiedad onClick con la funcion
+para desplegar el nav lateral... mas adelante
+*/
+
+/* 
+
+CREANDO EL MENU LATERAL CON ANIMACION:
+
+es muy importante que lo coloquemos como hijo directo de body, debe estar lo
+mas alto posbile, en el contenedor mas grande, ya que quiero que al darle 
+position relative, quede afuera de todo como fantasma.
+
+lo posiciono como yo desee en el la pantalla con top, right, etc...
+es muy importante que no le ponga directamente al sidebar padding en el eje x,
+, en el eje y,e sta bien. El padding se lo pongo a sus hijos para crear esa 
+distancia.
+
+tambien es importante setear overflow-x: hidden; ya que la manera de esconder
+el menu, sera seteando su width a 0, para que queden sus hijos ocultos.
+
+BOTON DE X:
+&times es su codigo ansi, debemos ponerle la prop onClick con una funcion
+de cerrar que setee el width a 0.
+luego lo posicionamos a voluntad despues de ponerle la poscion en absolute.
+*/
+
+/* 
+FLEX ITEMS QUE CAMBIAN DE DIMENSIONES SEGUN LAS DIMENCIONES DE SU CONTENEDOR:
+para estos casos nos viene perfecto las dimensiones en porcentajes de los elementos 
+*/
+
+/* 
+NO USAR PADDING PARA CENTAR ELEMENTOS!!!
+para hacer el maquetado, a la hora de decidir la posicion de los elementos y sus distancias, es mucho mejor usar flex o el truco de margen
+para centrar los elementos en el maquetado.
+
+*/
+
+
+/* FLEXBOX:
+
+es inmportante usar bien las propiedades min-height y max-height
+min: nos dice lo minimo que medira nuesto elemento, recordemos que los flexible items no tinen
+a priori medidad definidas, toman solo lo que necesitan  y NADA MAS, si necesito que en mi contenedor haya mas espacio entre los elementos, le puedo aplicar una medida minima, siempre, al menos medira eso, si lo voy conprimiedo en alguna dimension, capaz se puede agrandar en la otra, pero siempre va a medir como minimo, lo que le hayamos seteado.
+
+en resumen: 
+
+min-height: k;  nunca va a medir menos que k (aunque le sobre espacio), puede medir mas si lo necesita.
+
+max-height: k;  nunca va a medir mas que k, puede medir menos si lo necesita (si no esta usando el espacio de sobra) */
+
+
+
+/* una manera muy interesante de centrar items en la pagina y realizar todo el maquetado sin tener
+q preocuparme por los paddings de las cajas principales darles display flex y luego (segun 
+convenga) centrarlas a la mitad de la pagina horizontalmente...
+  Eso si, hay que darles un max-width para que sean responsive y se puedan achicar proporcionalmente como yo desee, y llegado a ciero width minimo, poner algun breakpoint responsive...
+
+para separar los contenedores principales eso si, usamos margenes tranqui */
+
+
+
+/* 
+
+COMO ELEGIR CUANDO UN FLEXIBLE ITEM USA EN EL WRAP.
+esto ocurre cuando el elemento ya no puede set comprimido mas, esto se consigue dandole min-width, cuando el width del flex iteme es menor,
+va a hacer wrap, y luego va a volver a ocupar su flex base en la siguiente linea
+
+*/
