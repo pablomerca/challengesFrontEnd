@@ -1,0 +1,134 @@
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%)
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    padding: 0px;
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 55vw bottom 50vh, left 55vw top 50vh ;
+   
+} 
+
+.card{
+
+    text-align: center;
+    width: 444px;
+    margin: 0px 10px;
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 10px 10px 10px rgb(54, 54, 54);
+
+
+    &-top{
+        img{
+            display: block;  // para areglar los margenes fantasma que tienen los elementos in-line
+            border-radius: 17px 17px 0px 0px;
+            width: 100%;
+        }
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    
+    &-bottom{
+        background-color: white;
+        border-radius:  0px 0px 17px 17px;
+        padding: 0px;
+        position: relative;
+
+
+        #prof-pic{
+            width: 120px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            border-radius: 60px;
+            
+            border: 5px solid rgb(255, 255, 255);
+            
+        }
+
+    }
+    
+    .person-data{
+        padding: 87px 0px 0px 0px;
+        width: 100%;
+    }
+    
+    .person-data::after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: rgb(152, 152, 152);
+        margin-top: 40px;
+    }
+    
+    .media-data{
+        
+        display: flex;   
+        gap: 75px;
+        
+        padding: 30px 10px;
+
+        h4{
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(172, 172, 172);
+        }
+    }
+
+}
+
+[class *= "-count"]{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6.5px;
+}
+
+
+// fonts
+
+.age{
+    font-size: 23px;
+    margin-left: 7px;
+    color: var(--Dark-grayish-blue);
+}
+.city{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+}
+
+
+
+// aclaraciones: 
+// backgroun images: para la pocsicion de las imagenes, podemos tomar como refetencia cualquier lado deseado, pero solo un lado por eje, meintras
+// que si hay que setear multiples imagenes, se coloca el url de cada una en orden, separado por una coma. Luego para setear las propiedades de los
+// multiples imagenes, ponemos en orden todo, uno por uno, separado por coma, 
